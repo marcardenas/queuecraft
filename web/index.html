@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>QueueCraft</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>QueueCraft</h1>
+      <p>Arrastra bloques para armar una arquitectura y simula tráfico real con teoría de colas (M/M/c).</p>
+    </header>
+
+    <main>
+      <section class="palette">
+        <h2>Bloques</h2>
+        <div class="block-card" draggable="true" data-type="source">Source<br /><small>usuarios/requests</small></div>
+        <div class="block-card" draggable="true" data-type="cache">Cache<br /><small>reduce tráfico río abajo</small></div>
+        <div class="block-card" draggable="true" data-type="service">Service<br /><small>servidor / API / DB</small></div>
+        <div class="block-card" draggable="true" data-type="sink">Sink<br /><small>fin del pipeline</small></div>
+      </section>
+
+      <section class="pipeline-area">
+        <h2>Pipeline</h2>
+        <div id="dropzone" class="dropzone">
+          <p class="hint">Arrastra bloques aquí, en orden, de izquierda a derecha.</p>
+        </div>
+        <button id="simulate-btn">Simular</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Modelo: red de colas abierta, cada <strong>Service</strong> se resuelve como M/M/c (Erlang C).
+        No es una simulación aleatoria: son fórmulas cerradas de teoría de colas, por eso el resultado es instantáneo.
+      </p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

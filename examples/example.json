@@ -1,0 +1,7 @@
+[
+  { "type": "source", "name": "Usuarios", "rate": 1000 },
+  { "type": "cache", "name": "Redis Cache", "hitRate": 0.7 },
+  { "type": "service", "name": "API Servers", "serviceRate": 150, "replicas": 3 },
+  { "type": "service", "name": "Base de Datos", "serviceRate": 80, "replicas": 2 },
+  { "type": "sink", "name": "Respuesta" }
+]

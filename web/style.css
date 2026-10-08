@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+header {
+  padding: 1.5rem 2rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  color: #9aa0a6;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+  align-items: flex-start;
+}
+
+.palette {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.block-card {
+  background: #1c2027;
+  border: 1px solid #2d323c;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  cursor: grab;
+  user-select: none;
+  text-align: center;
+}
+
+.block-card small {
+  color: #9aa0a6;
+}
+
+.pipeline-area {
+  flex: 1;
+}
+
+.dropzone {
+  min-height: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #15171c;
+  border: 2px dashed #2d323c;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dropzone.drag-over {
+  border-color: #5b8cff;
+}
+
+.hint {
+  color: #6b7280;
+}
+
+.pipeline-block {
+  background: #1c2027;
+  border: 1px solid #2d323c;
+  border-radius: 8px;
+  padding: 0.8rem;
+  width: 220px;
+  position: relative;
+}
+
+.pipeline-block h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.pipeline-block label {
+  display: block;
+  font-size: 0.75rem;
+  color: #9aa0a6;
+  margin-top: 0.4rem;
+}
+
+.pipeline-block input {
+  width: 100%;
+  background: #0f1115;
+  border: 1px solid #2d323c;
+  border-radius: 4px;
+  color: #e6e6e6;
+  padding: 0.3rem;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.result {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #2d323c;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.result .ok {
+  color: #4ade80;
+}
+
+.result .warn {
+  color: #fbbf24;
+}
+
+.result .bad {
+  color: #f87171;
+  font-weight: bold;
+}
+
+#simulate-btn {
+  margin-top: 1rem;
+  background: #5b8cff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+#simulate-btn:hover {
+  background: #3f6fe0;
+}
+
+footer {
+  padding: 1rem 2rem 2rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+  max-width: 700px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "queuecraft",
+  "version": "0.1.0",
+  "description": "Arrastra bloques para armar una arquitectura de sistema y simula tráfico real con teoría de colas (M/M/c). GUI + CLI.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "queuecraft": "./cli.js"
+  },
+  "scripts": {
+    "cli": "node cli.js",
+    "gui": "node serve.js"
+  }
+}
